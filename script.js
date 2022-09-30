@@ -127,17 +127,17 @@ for (elemento of arraySomado) {
 // transformaStringTudo(suplemento4)
 // transformaStringTudo(suplemento5)
 
-function retornaObjeto(array, string){
-    const buscaSuplemento = array.filter((elemento) => {
-        if(elemento.nome === string){
-            return elemento
-    }
-})
-    if(buscaSuplemento.length === 0){
-        alert("Suplemento não encontrado")
-    }else{
-        console.log(buscaSuplemento);
-    }
-}
-retornaObjeto(arraySomado, "Whey protein")
+// function retornaObjeto(array, string){
+//     const buscaSuplemento = array.filter((elemento) => {
+//         if(elemento.nome === string){
+//             return elemento
+//     }
+// })
+//     if(buscaSuplemento.length === 0){
+//         alert("Suplemento não encontrado")
+//     }else{
+//         console.log(buscaSuplemento);
+//     }
+// }
+// retornaObjeto(arraySomado, "Whey protein")
 
