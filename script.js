@@ -5,7 +5,7 @@ const suplemento1 = {
     funcao: 'Tem como função a recuperação muscular após exercícios físicos de alta intensidade',
     valorAproximado: 100,
     aprovadoAnvisa: true,
-    array1: ['Concentrado', ' Isolado', ' Hidrolisado']
+    array: ['Concentrado', ' Isolado', ' Hidrolisado']
 }
 
 
@@ -15,7 +15,7 @@ const suplemento2 = {
     funcao: 'Serve para fornecer energia para os músculos e favorecer o desenvolvimento das fibras musculares',
     valorAproximado: 80,
     aprovadoAnvisa: true,
-    array2: ['Desempenho fisico', ' Tratamento de doenças musculares', ' Prevenir doenças crônicas']
+    array: ['Desempenho fisico', ' Tratamento de doenças musculares', ' Prevenir doenças crônicas']
 }
 
 
@@ -25,7 +25,7 @@ const suplemento3 = {
     funcao: 'Desempenha função essencial para o crescimento e a reparação de músculos e tecidos, produção de anticorpos e enzimas',
     valorAproximado: 45,
     aprovadoAnvisa: true,
-    array3: ['Reduz a fadiga muscular', ' Auxilia no crescimento muscular', ' Livre de colaterais']
+    array: ['Reduz a fadiga muscular', ' Auxilia no crescimento muscular', ' Livre de colaterais']
 }
 
 
@@ -35,7 +35,7 @@ const suplemento4 = {
     funcao: 'Evita que o organismo queime massa muscular para gerar energia durante os treinos, pois auxilia no aumento da reserva de glicogênio muscular.',
     valorAproximado: 65,
     aprovadoAnvisa: true,
-    array4: ['Melhora da função intestinal', ' Melhora do humor e bem-estar', ' Fornecimento de energia para o sistema imunológico']
+    array: ['Melhora da função intestinal', ' Melhora do humor e bem-estar', ' Fornecimento de energia para o sistema imunológico']
 }
 
 
@@ -45,7 +45,7 @@ const suplemento5 = {
     funcao: 'Ajuda a contrair os vasos sanguíneos do corpo, fazendo aumentar a pressão arterial em casos de queda abrupta da pressão arterial.',
     valorAproximado: 10,
     aprovadoAnvisa: false,
-    array5: ['Excesso de suor', ' Diminuição ou aumento da pressão arterial', ' Insônia']
+    array: ['Excesso de suor', ' Diminuição ou aumento da pressão arterial', ' Insônia']
 }
 
 //2
@@ -56,35 +56,88 @@ const arrayTotal = [];
 
 //4
 
-if (suplemento1.aprovadoAnvisa === true) {
-    arrayTotal.push(suplemento1)
-} else {
-    alert('Seu item 1 não pôde ser adicionado.')
+// if (suplemento1.aprovadoAnvisa === true) {
+//     arrayTotal.push(suplemento1)
+// } else {
+//     alert('Seu item 1 não pôde ser adicionado.')
+// }
+
+// if (suplemento2.aprovadoAnvisa === true) {
+//     arrayTotal.push(suplemento2)
+// } else {
+//     alert('Seu item 2 não pôde ser adicionado.')
+// }
+
+// if (suplemento3.aprovadoAnvisa === true) {
+//     arrayTotal.push(suplemento3)
+// } else {
+//     alert('Seu item 3 não pôde ser adicionado.')
+// }
+
+// if (suplemento4.aprovadoAnvisa === true) {
+//     arrayTotal.push(suplemento4)
+// } else {
+//     alert('Seu item 4 não pôde ser adicionado.')
+// }
+
+// if (suplemento5.aprovadoAnvisa === true) {
+//     arrayTotal.push(suplemento5)
+// } else {
+//     alert('Seu item 5 não pôde ser adicionado.')
+// }
+
+// console.log(arrayTotal)
+
+
+// Semana 3
+
+function transformaString(objeto) {
+    for (i of objeto.array) {
+        objeto.array = `${objeto.array}`
+    }
+    return objeto
 }
 
-if (suplemento2.aprovadoAnvisa === true) {
-    arrayTotal.push(suplemento2)
-} else {
-    alert('Seu item 2 não pôde ser adicionado.')
+// console.log(transformaString(suplemento1))
+// console.log(transformaString(suplemento2))
+// console.log(transformaString(suplemento3))
+// console.log(transformaString(suplemento4))
+// console.log(transformaString(suplemento5))
+
+
+const arraySomado = [suplemento1, suplemento2, suplemento3, suplemento4, suplemento5]
+
+for (elemento of arraySomado) {
+    for (indice in elemento) {
+        console.log(`${indice}: ${elemento[indice]}\n`)
+    }
+    console.log('--------------------')
 }
 
-if (suplemento3.aprovadoAnvisa === true) {
-    arrayTotal.push(suplemento3)
-} else {
-    alert('Seu item 3 não pôde ser adicionado.')
-}
+// function transformaStringTudo(objeto) {
+//     for (i in objeto){
+//         console.log(`${i}: ${objeto[i]}\n`)
+//     }
+//     console.log('--------------------')
+// }
 
-if (suplemento4.aprovadoAnvisa === true) {
-    arrayTotal.push(suplemento4)
-} else {
-    alert('Seu item 4 não pôde ser adicionado.')
-}
+// transformaStringTudo(suplemento1)
+// transformaStringTudo(suplemento2)
+// transformaStringTudo(suplemento3)
+// transformaStringTudo(suplemento4)
+// transformaStringTudo(suplemento5)
 
-if (suplemento5.aprovadoAnvisa === true) {
-    arrayTotal.push(suplemento5)
-} else {
-    alert('Seu item 5 não pôde ser adicionado.')
+function retornaObjeto(array, string){
+    const buscaSuplemento = array.filter((elemento) => {
+        if(elemento.nome === string){
+            return elemento
+    }
+})
+    if(buscaSuplemento.length === 0){
+        alert("Suplemento não encontrado")
+    }else{
+        console.log(buscaSuplemento);
+    }
 }
-
-console.log(arrayTotal)
+retornaObjeto(arraySomado, "Whey protein")
 
