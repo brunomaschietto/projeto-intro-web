@@ -4,38 +4,118 @@
     box-sizing: border-box;
 }
 
-header h1 {
+header {
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid black;
-    text-align: center;
-    height: 10vh;
-    background-color: rgb(74, 221, 201);
+    justify-content: center;
+    /* height: 8vh; */
+    background-color: rgb(216, 43, 43);
     padding: 20px;
 
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5vh 8vw;
+    padding: 1vh;
+}
+
 nav {
-    height: 5vh;
-    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    /* height: 5vh; */
+    background-color: black;
+    color: white;
     padding: 10px;
     text-align: center;
     border: 1px solid black;
 }
 
 main {
-    background-color: white;
+    background-color: rgb(46, 42, 42);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-section {
-    padding: 10px;
-    border-left: 200px solid black;
-    border-right: 200px solid black;
-    text-align: center;
+.secao {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(124, 118, 118);
+    padding: 0 1vw;
+    color: white;
+}
+
+#secao1 {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 400px;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#secao2 {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 400px;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#secao-um {
+    padding: 0 2vw;
+}
+
+#secao-dois {
+    padding: 0 2vw;
+}
+
+#secao-tres {
+    padding: 0 2vw;
+}
+
+#secao-quatro {
+    padding: 0 2vw;
+}
+
+#secao-cinco {
+    padding: 0 2vw;
+}
+
+#secao3 {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 400px;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#secao4 {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 400px;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#secao5 {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 400px;
+    align-items: center;
+    border-radius: 1rem;
 }
 
 ul {
     list-style-type: none;
 }
+
 
 img {
     height: 200px;
@@ -47,10 +127,29 @@ footer {
     text-align: center;
 
     padding: 10px;
-    background-color: aquamarine;  
+    background-color: grey;
 }
 
 .icone {
     height: 40px;
     width: 40px;
+}
+
+#font-diferente {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#pesquisa {
+    background-color: grey;
+    color: white;
+}
+
+#botao1 {
+    background-color: rgb(19, 18, 18);
+    color: white;
+}
+
+#botao1:hover {
+    background-color: white;
+    color: black;
 }
