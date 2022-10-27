@@ -1,21 +1,25 @@
 
 const suplemento1 = {
-    nome: 'Whey protein',
-    descricao: 'Proteína do soro do leite',
-    funcao: 'Tem como função a recuperação muscular após exercícios físicos de alta intensidade',
-    valorAproximado: 100,
-    aprovadoAnvisa: true,
-    array: ['Concentrado', ' Isolado', ' Hidrolisado']
+    
+    nome: 'Whey protein.',
+    descricao: 'Proteína do soro do leite.',
+    funcao: 'Função: Tem como função a recuperação muscular após exercícios físicos de alta intensidade.',
+    valorAproximado: 'R$ ' + 100 + ' reais.',
+    aprovadoAnvisa: 'Aprovado pela Anvisa.',
+    array: ['Temos concentrado', ' isolado', ' hidrolisado.'],
+    
 }
+
 
 
 const suplemento2 = {
     nome: 'Creatina',
     descricao: 'Substância produzida pelos rins e pelo fígado',
     funcao: 'Serve para fornecer energia para os músculos e favorecer o desenvolvimento das fibras musculares',
-    valorAproximado: 80,
-    aprovadoAnvisa: true,
-    array: ['Desempenho fisico', ' Tratamento de doenças musculares', ' Prevenir doenças crônicas']
+    valorAproximado: 'R$ ' + 80 + ' reais.',
+    aprovadoAnvisa: 'Aprovado pela Anvisa',
+    array: ['Melhora no desempenho fisico', ' tratamento de doenças musculares', ' prevenir doenças crônicas'],
+    
 }
 
 
@@ -23,19 +27,21 @@ const suplemento3 = {
     nome: 'BCAA(Branched Chain Amino Acids)',
     descricao: 'Produto para suplementar a alimentação em aminoácidos',
     funcao: 'Desempenha função essencial para o crescimento e a reparação de músculos e tecidos, produção de anticorpos e enzimas',
-    valorAproximado: 45,
-    aprovadoAnvisa: true,
-    array: ['Reduz a fadiga muscular', ' Auxilia no crescimento muscular', ' Livre de colaterais']
+    valorAproximado:'R$ '+ 45 + ' reais.',
+    aprovadoAnvisa: 'Aprovado pela Anvisa',
+    array: ['Reduz a fadiga muscular', ' auxilia no crescimento muscular', ' livre de colaterais'],
+    
 }
 
 
 const suplemento4 = {
     nome: 'Glutamina',
     descricao: 'A glutamina é um aminoácido, que pode ser considerada praticamente como não essencial',
-    funcao: 'Evita que o organismo queime massa muscular para gerar energia durante os treinos, pois auxilia no aumento da reserva de glicogênio muscular.',
-    valorAproximado: 65,
-    aprovadoAnvisa: true,
-    array: ['Melhora da função intestinal', ' Melhora do humor e bem-estar', ' Fornecimento de energia para o sistema imunológico']
+    funcao: 'Evita que o organismo queime massa muscular para gerar energia durante os treinos.',
+    valorAproximado: 'R$' + 65 + ' reais.',
+    aprovadoAnvisa: 'Aprovado pela Anvisa',
+    array: ['Melhora da função intestinal', ' melhora do humor e bem-estar', ' fornecimento de energia para o sistema imunológico'],
+    
 }
 
 
@@ -43,9 +49,19 @@ const suplemento5 = {
     nome: 'Efedrina',
     descricao: 'É um remédio vasoconstrito',
     funcao: 'Ajuda a contrair os vasos sanguíneos do corpo, fazendo aumentar a pressão arterial em casos de queda abrupta da pressão arterial.',
-    valorAproximado: 10,
-    aprovadoAnvisa: false,
-    array: ['Excesso de suor', ' Diminuição ou aumento da pressão arterial', ' Insônia']
+    valorAproximado: 'R$ ' + 10 + ' reais.',
+    aprovadoAnvisa: 'Não é aprovado pela Anvisa.',
+    array: ['Excesso de suor', ' diminuição ou aumento da pressão arterial', ' insônia'],
+    
+}
+
+const suplemento6 = {
+    nome: 'Horus',
+    descricao: 'Pré treino com beta-alanina',
+    funcao: 'O produto melhora a intensidade dos treinos.',
+    valorAproximado: 'R$ ' + 95 + ' reais.',
+    aprovadoAnvisa: 'Aprovado pela Anvisa.',
+    array: ['Aumenta a concentração', ' força', ' resistência.'],
 }
 
 //2
@@ -107,6 +123,8 @@ function transformaString(objeto) {
 
 const arraySomado = [suplemento1, suplemento2, suplemento3, suplemento4, suplemento5]
 
+
+
 for (elemento of arraySomado) {
     for (indice in elemento) {
         console.log(`${indice}: ${elemento[indice]}\n`)
@@ -140,4 +158,46 @@ for (elemento of arraySomado) {
 //     }
 // }
 // retornaObjeto(arraySomado, "Whey protein")
+
+function empurraObjeto(objeto, id) {
+    for (elemento in objeto) {
+        const suplementacao = document.getElementById(id)
+        const liCriada = document.createElement('li')
+        liCriada.innerHTML = objeto[elemento]
+        suplementacao.appendChild(liCriada)
+    }
+}
+
+empurraObjeto(suplemento1, 'secao-um')
+empurraObjeto(suplemento2, 'secao-dois')
+empurraObjeto(suplemento3, 'secao-tres')
+empurraObjeto(suplemento4, 'secao-quatro')
+empurraObjeto(suplemento5, 'secao-cinco')
+empurraObjeto(suplemento6, 'secao-seis')
+
+
+function buscaElemento(event) {
+    event.preventDefault();
+    let valorInput = document.getElementById('pesquisa').value
+    valorInput = valorInput.toLowerCase();
+    let classeTotal = document.getElementsByClassName('secao');
+
+    if (valorInput.length === 0) {
+        alert('Suplemento não encontrado')
+        for (i = 0; i < classeTotal.length; i++) { 
+            classeTotal[i].style.display="flex";
+        }
+    } else {
+        for (i = 0; i < classeTotal.length; i++) { 
+            if (!classeTotal[i].innerHTML.toLowerCase().includes(valorInput)) {
+                classeTotal[i].style.display="none";
+            }
+            else {
+                classeTotal[i].style.display="flex";
+            }
+        }
+
+    }
+    
+}
 

@@ -1,103 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:ital,wght@1,700&display=swap"
+        rel="stylesheet">
     <title>Projeto de Introdução à Web</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Em busca de mudanças?? Conheça nossos produtos e comece hoje!</h1>
     </header>
-    <nav> 
+    <nav>
         <div>
-            <h3 id="font-diferente">Loja do Bruno</h3> 
+            
+            <h3 id="font-diferente"><img id="foto-nav" src="icons8-haltere-64.png" alt="">Loja do Bruno</h3>
+        </div>
+        <div class="dentro-nav">
+            <h3 id="font-diferente"><a href="#secoes-total">Nossos produtos</a></h3>
+            <h3 id="font-diferente"><a href="#footer-apoio">Contato</a></h3>
+            
         </div>
 
-        <div>Pesquisa: 
-            <input type="text" name="pesquisa" id="pesquisa">
-            <button type="submit" id="botao1">Buscar</button>
+        <div>
+            <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise seu suplemento">
+            <button onclick="buscaElemento(event)" id="botao1">Buscar</button>
         </div>
-         
+
     </nav>
 
     <main>
-        <div class="container">
-        
-        <section class="secao" id="secao1">
-            <img src="./wheyprotein.png" alt="foto whey" id="img-1">
-            <ul id="secao-um">
-                <li><a href="https://www.buscape.com.br/suplementos/conteudo/whey-protein-para-que-serve" target="_blank" rel="noopener noreferrer">Whey protein</a></li>
-                <li>Função: Tem como função a recuperação muscular após exercícios físicos de alta intensidade</li>
+        <div class="container" id="id-total">
+
+            <div class="foto-intro">
+                <div class="foto-intro-text">
+                    <h1 class="h1-intro">Aqui a gente te prepara para qualquer desafio no mundo da musculação.</h1>
+                    <h2 class="h2-intro">Seja qual for sua batalha, conte com a gente!</h2>
+                </div>
+                <img class="foto-treino" src="a-musculacao-na-vida-do-homem-1560779991.jpg" alt="">
+            </div>
+            <div class="secoes" id="secoes-total">
+            <section class="secao" id="secao1">
+                <img src="./wheyprotein.png" alt="foto whey" id="img-1">
+                <ul class="ul" id="secao-um">
+                    <!-- <li><a href="https://www.buscape.com.br/suplementos/conteudo/whey-protein-para-que-serve"
+                            target="_blank" rel="noopener noreferrer">Whey protein</a></li> -->
+                    <!-- <li>Função: Tem como função a recuperação muscular após exercícios físicos de alta intensidade</li>
                 <br>
                 <li>Aprovado pela Anvisa</li>
                 <br>
                 <li>Temos Whey Concentrado, Isolado e Hidrolisado</li>
-                <li>R$ 100 reais</li>
-            </ul>
-            
-        </section>
-        <section class="secao" id="secao2">
-            <img src="./creatina.png" alt="foto creatina" id="img-2">
-            <ul id="secao-dois">
-                <li><a href="https://saude.abril.com.br/medicina/o-que-e-creatina-e-para-que-serve-esse-suplemento-famoso-em-academias/" target="_blank" rel="noopener noreferrer">Creatina</a></li>
-                <li>Função: Serve para fornecer energia para os músculos e favorecer o desenvolvimento das fibras musculares</li>
+                <li>R$ 100 reais</li> -->
+                </ul>
+
+            </section>
+            <section class="secao" id="secao2">
+                <img src="./creatina.png" alt="foto creatina" id="img-2">
+                <ul class="ul" id="secao-dois">
+                    <!-- <li><a href="https://saude.abril.com.br/medicina/o-que-e-creatina-e-para-que-serve-esse-suplemento-famoso-em-academias/"
+                            target="_blank" rel="noopener noreferrer">Creatina</a></li> -->
+                    <!-- <li>Função: Serve para fornecer energia para os músculos e favorecer o desenvolvimento das fibras musculares</li>
                 <br>
                 <li>Aprovado pela Anvisa</li>
                 <br>
                 <li>Ajuda no desempenho fisico, tratamento de doenças musculares e previni doenças crônicas</li>
-                <li>R$ 80 reais</li>
-            </ul>
-            
-        </section>
-        <section class="secao" id="secao3">
-            <img src="./produto-principal-nova.png" alt="foto bcaa" id="img-3">
-            <ul id="secao-tres">
-                <li><a href="https://blog.ovosmantiqueira.com.br/bcaa-para-que-serve#:~:text=Em%20resumo%2C%20o%20BCAA%20%C3%A9,no%20ganho%20de%20massa%20muscular." target="_blank" rel="noopener noreferrer"> BCAA(Branched Chain Amino Acids)</a></li>
-                <li>Função: Desempenha função essencial para o crescimento e a reparação de músculos e tecidos, produção de anticorpos e enzimas</li>
+                <li>R$ 80 reais</li> -->
+                </ul>
+
+            </section>
+            <section class="secao" id="secao3">
+                <img src="./produto-principal-nova.png" alt="foto bcaa" id="img-3">
+                <ul class="ul" id="secao-tres">
+                    <!-- <li><a href="https://blog.ovosmantiqueira.com.br/bcaa-para-que-serve#:~:text=Em%20resumo%2C%20o%20BCAA%20%C3%A9,no%20ganho%20de%20massa%20muscular."
+                            target="_blank" rel="noopener noreferrer"> BCAA(Branched Chain Amino Acids)</a></li> -->
+                    <!-- <li>Função: Desempenha função essencial para o crescimento e a reparação de músculos e tecidos, produção de anticorpos e enzimas</li>
                 <br>
                 <li>Aprovado pela Anvisa</li>
                 <br>
                 <li>Reduz a fadiga muscular, auxilia no crescimento muscular, livre de colaterais</li>
-                <li>R$ 45 reais</li>
-            </ul>
-            
-        </section>
-        <section class="secao" id="secao4">
-            <img src="./glutamina.png" alt="foto glutamina" id="img-4">
-            <ul id="secao-quatro">
-                <li><a href="https://www.newnutrition.com.br/aminoacidos/glutamina/#:~:text=A%20Glutamina%20tamb%C3%A9m%20conhecida%20como,prim%C3%A1rio%20para%20as%20c%C3%A9lulas%20musculares." target="_blank" rel="noopener noreferrer">Glutamina</a></li>
-                <li>Função: Evita que o organismo queime massa muscular para gerar energia durante os treinos, pois auxilia no aumento da reserva de glicogênio muscular</li>
+                <li>R$ 45 reais</li> -->
+                </ul>
+
+            </section>
+            <section class="secao" id="secao4">
+                <img src="./glutamina.png" alt="foto glutamina" id="img-4">
+                <ul class="ul" id="secao-quatro">
+                    <!-- <li><a href="https://www.newnutrition.com.br/aminoacidos/glutamina/#:~:text=A%20Glutamina%20tamb%C3%A9m%20conhecida%20como,prim%C3%A1rio%20para%20as%20c%C3%A9lulas%20musculares."
+                            target="_blank" rel="noopener noreferrer">Glutamina</a></li> -->
+                    <!-- <li>Função: Evita que o organismo queime massa muscular para gerar energia durante os treinos, pois auxilia no aumento da reserva de glicogênio muscular</li>
                 <br>
                 <li>Aprovado pela Anvisa</li>
                 <br>
                 <li>Melhora da função intestinal, humor e bem-estar, fornecimento de energia para o sistema imunológico</li>
-                <li>R$ 65 reais</li>
-            </ul>
-            
-        </section>
-        <section class="secao" id="secao5">
-            <img src="./efedrina.jpg" alt="foto efedrina" id="img-5">
-            <ul id="secao-cinco">
-                <li><a href="https://www.tuasaude.com/efedrina/#:~:text=A%20Efedrina%20%C3%A9%20um%20rem%C3%A9dio,sob%20orienta%C3%A7%C3%A3o%20de%20um%20m%C3%A9dico." target="_blank" rel="noopener noreferrer">Efedrina</a></li>
-                <li>Função: Ajuda a contrair os vasos sanguíneos do corpo, fazendo aumentar a pressão arterial em casos de queda abrupta da pressão arterial</li>
+                <li>R$ 65 reais</li> -->
+                </ul>
+
+            </section>
+            <section class="secao" id="secao5">
+                <img src="./efedrinhaFundo.png" alt="foto efedrina" id="img-5">
+                <ul class="ul" id="secao-cinco">
+                    <!-- <li><a href="https://www.tuasaude.com/efedrina/#:~:text=A%20Efedrina%20%C3%A9%20um%20rem%C3%A9dio,sob%20orienta%C3%A7%C3%A3o%20de%20um%20m%C3%A9dico."
+                            target="_blank" rel="noopener noreferrer">Efedrina</a></li> -->
+                    <!-- <li>Função: Ajuda a contrair os vasos sanguíneos do corpo, fazendo aumentar a pressão arterial em casos de queda abrupta da pressão arterial</li>
                 <br>
                 <li>Não é aprovado pela Anvisa</li>
                 <br>
                 <li>Possui alguns colaterais como: Excesso de suor, Diminuição ou aumento da pressão arterial, Insônia</li>
-                <li>R$ 10 reais</li>
-            </ul>
-            
-        </section>
-    </div>
+                <li>R$ 10 reais</li> -->
+                </ul>
+
+            </section>
+            <section class="secao" id="secao6">
+                <img src="pre-workout-max-titanium-limao-yuzu.png" alt="foto horus" id="img-6">
+                <ul class="ul" id="secao-seis">
+                    <!-- <li><a href="https://www.tuasaude.com/efedrina/#:~:text=A%20Efedrina%20%C3%A9%20um%20rem%C3%A9dio,sob%20orienta%C3%A7%C3%A3o%20de%20um%20m%C3%A9dico."
+                            target="_blank" rel="noopener noreferrer">Efedrina</a></li> -->
+                    <!-- <li>Função: Ajuda a contrair os vasos sanguíneos do corpo, fazendo aumentar a pressão arterial em casos de queda abrupta da pressão arterial</li>
+                <br>
+                <li>Não é aprovado pela Anvisa</li>
+                <br>
+                <li>Possui alguns colaterais como: Excesso de suor, Diminuição ou aumento da pressão arterial, Insônia</li>
+                <li>R$ 10 reais</li> -->
+                </ul>
+
+            </section>
+        </div>
+        </div>
     </main>
 
-    <footer>
-        <a href="https://www.instagram.com/brunomaschietto/" target="_blank"><img src="./icons8-instagram.svg" alt="icone instagram" class="icone"></a>
-        <a href="https://github.com/brunomaschietto" target="_blank"><img src="./icons8-github (1).svg" alt="icone github" class="icone"></a>
+    <footer id="footer-apoio">
+        <h3 id="font-diferente">Criado por Bruno Maschietto © 2022</h3>
+        <a href="https://www.instagram.com/brunomaschietto/" target="_blank"><img src="./icons8-instagram.svg"
+                alt="icone instagram" class="icone"></a>
+        <a href="https://github.com/brunomaschietto" target="_blank"><img src="./icons8-github (1).svg"
+                alt="icone github" class="icone"></a>
     </footer>
 </body>
+
 </html>

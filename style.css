@@ -10,33 +10,74 @@ header {
     border: 1px solid black;
     justify-content: center;
     /* height: 8vh; */
-    background-color: rgb(216, 43, 43);
+    background-color: black;
+    color: white;
     padding: 20px;
 
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     gap: 5vh 8vw;
     padding: 1vh;
+    height: 80%;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     /* height: 5vh; */
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px;
     text-align: center;
-    border: 1px solid black;
+    align-items: center;
+    
 }
 
 main {
-    background-color: rgb(46, 42, 42);
+    background-color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.foto-intro {
+    width: 80vw;
+    /* border: 1px solid rgb(206, 200, 200);
+    border-radius: 0.5rem; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-intro-text {
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+    max-width: 830px;
+}
+
+.h1-intro {
+    color: rgb(207, 36, 36);
+    font-family: Poppins;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.foto-treino {
+    width: 32vw;
+    height: 44vh;
+    min-width: 300px;
+}
+
+.h2-intro {
+    color: rgb(207, 36, 36);
+    font-family: Poppins;
+    text-align: center;
 }
 
 .secao {
@@ -45,22 +86,34 @@ main {
     background-color: rgb(124, 118, 118);
     padding: 0 1vw;
     color: white;
+    height: 40vh;
+    width: 35vw;
+    text-shadow: rgb(49, 46, 46) 0.1em 0.1em 0.1em;
+    min-width: 300px;
+}
+
+.secoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
 }
 
 #secao1 {
     display: flex;
-    flex-wrap: wrap;
+    
     border: 1px solid black;
-    width: 400px;
+    
     align-items: center;
     border-radius: 1rem;
 }
 
 #secao2 {
     display: flex;
-    flex-wrap: wrap;
+   
     border: 1px solid black;
-    width: 400px;
+    
     align-items: center;
     border-radius: 1rem;
 }
@@ -87,39 +140,50 @@ main {
 
 #secao3 {
     display: flex;
-    flex-wrap: wrap;
+   
     border: 1px solid black;
-    width: 400px;
+    
     align-items: center;
     border-radius: 1rem;
 }
 
 #secao4 {
     display: flex;
-    flex-wrap: wrap;
+ 
     border: 1px solid black;
-    width: 400px;
+    
     align-items: center;
     border-radius: 1rem;
 }
 
 #secao5 {
     display: flex;
-    flex-wrap: wrap;
+    
     border: 1px solid black;
-    width: 400px;
+    
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#secao6 {
+    display: flex;
+    
+    border: 1px solid black;
+    
     align-items: center;
     border-radius: 1rem;
 }
 
 ul {
+    font-size: 1rem;
     list-style-type: none;
+    flex-wrap: wrap;
 }
 
 
 img {
-    height: 200px;
-    width: 200px;
+    height: 16vh;
+    width: 8vw;
 }
 
 footer {
@@ -137,19 +201,145 @@ footer {
 
 #font-diferente {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
 }
 
 #pesquisa {
-    background-color: grey;
-    color: white;
+    background-color: white;
+    color: black;
+    height: 3vh;
+}
+
+input::placeholder {
+    color: black;
 }
 
 #botao1 {
     background-color: rgb(19, 18, 18);
     color: white;
+    height: 3vh;
+    border-radius: 0.5rem;
 }
 
-#botao1:hover {
-    background-color: white;
-    color: black;
+#foto-nav {
+    height: 50px;
+    width: 50px;
 }
+
+#img-5 {
+    padding-top: 10px;
+}
+
+#img-3 {
+    padding-top: 10px;
+}
+
+.dentro-nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-around;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-device-width : 601px){
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid black;
+        justify-content: center;
+        /* height: 8vh; */
+        background-color: black;
+        color: white;
+        padding: 20px;
+    
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5vh 8vw;
+        padding: 1vh;
+        height: 80%;
+        font-size: 0.5rem;
+    }
+
+    footer {
+        border: 1px solid black;
+        text-align: center;
+    
+        padding: 10px;
+        background-color: grey;
+    }
+    .secao {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(124, 118, 118);
+        padding: 0 1vw;
+        color: white;
+        height: auto;
+        width: min-content;
+        font-size: 0.62rem;
+        text-shadow: rgb(49, 46, 46) 0.1em 0.1em 0.1em;
+    
+        
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        /* height: 5vh; */
+        background-color: white;
+        color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        
+    }
+    .dentro-nav {
+        display: none;
+    }
+    ul {
+        font-size: 0.62rem;
+    }
+    img {
+        height: 16vh;
+        width: 26vw;
+    }
+    .foto-intro {
+        height: auto;
+        width: 70vw;
+        /* border: 1px solid rgb(206, 200, 200);
+        border-radius: 0.5rem; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .foto-treino {
+        width: 60vw;
+        height: auto;
+        min-width: initial;
+    }
+    
+    .h1-intro {
+        text-align: center;
+    }
+
+    .foto-intro-text {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 830px;
+    }
+  }
